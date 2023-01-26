@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.InteropServices;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
 using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
@@ -11,10 +12,10 @@ namespace Raccoon.Ninja.Application.Benchmarks.Benchmarks;
  Orderer(SummaryOrderPolicy.FastestToSlowest)]
 public class FindOneBenchmarks
 {
-    private IList<Product> _list;
-    private IDictionary<Guid, Product> _dictionary;
+    private List<Product> _list;
+    private Dictionary<Guid, Product> _dictionary;
     private HashSet<Product> _hashSet;
-    private IList<Guid> _ids;
+    private List<Guid> _ids;
 
     [Params(2, 10, 100, 500)] public int QtyElements { get; set; }
 
@@ -55,7 +56,16 @@ public class FindOneBenchmarks
         {
             //The value might be null.
             var x = _dictionary.FirstOrDefault(x => x.Key == _ids[i]);
-            
+        }
+    }
+    
+    [Benchmark]
+    public void Dictionary_GetValueRefOrAddDefault()
+    {
+        for (var i = 0; i < _ids.Count; i++)
+        {
+            //If using this, make sure the dictionary is not being modified while iterating.
+            ref var x = ref CollectionsMarshal.GetValueRefOrAddDefault(_dictionary, _ids[i], out var exists);
         }
     }
     

@@ -10,4 +10,7 @@ using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 //BenchmarkRunner.Run<AutoMapperBenchmarks>();
 
 //Uncomment to run "Find one" benchmark.
-BenchmarkRunner.Run<FindOneBenchmarks>();
+//BenchmarkRunner.Run<FindOneBenchmarks>();
+
+//Uncomment to run "Numeric benchmarks" benchmark.
+BenchmarkRunner.Run<NumericBenchmarks>();

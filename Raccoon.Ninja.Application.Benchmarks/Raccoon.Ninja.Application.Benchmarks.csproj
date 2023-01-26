@@ -20,6 +20,9 @@
       <Content Include="..\findonebenchmark.md">
         <Link>findonebenchmark.md</Link>
       </Content>
+      <Content Include="..\numericbenchmark.md">
+        <Link>numericbenchmark.md</Link>
+      </Content>
       <Content Include="..\readme.md">
         <Link>readme.md</Link>
       </Content>
