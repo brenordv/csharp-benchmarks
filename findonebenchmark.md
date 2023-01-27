@@ -43,39 +43,34 @@ Now let's see how they perform in practice.
 ## Results
 (For this benchmark I have not divided the result table)
 
-| Method                             | QtyElements |            Mean |          Error |         StdDev |          Median |             Min |             Max | Rank |   Gen0 | Allocated |
-|------------------------------------|-------------|----------------:|---------------:|---------------:|----------------:|----------------:|----------------:|-----:|-------:|----------:|
-| Dictionary_TryGet                  | 2           |        39.22 ns |       0.812 ns |       1.603 ns |        39.08 ns |        36.23 ns |        43.27 ns |    1 |      - |         - |
-| Dictionary_GetValueRefOrAddDefault | 2           |        52.61 ns |       1.072 ns |       2.065 ns |        52.41 ns |        49.28 ns |        58.37 ns |    2 |      - |         - |
-| Dictionary_ContainsThenGet         | 2           |        67.94 ns |       1.391 ns |       2.040 ns |        67.56 ns |        63.65 ns |        72.09 ns |    3 |      - |         - |
-| List_FirstOrDefault                | 2           |       189.42 ns |       3.823 ns |       7.180 ns |       190.61 ns |       175.63 ns |       203.05 ns |    4 | 0.0420 |     264 B |
-| Dictionary_TryGet                  | 10          |       196.13 ns |       3.882 ns |       7.291 ns |       194.77 ns |       185.68 ns |       212.40 ns |    5 |      - |         - |
-| HashSet_FirstOrDefault             | 2           |       204.14 ns |       4.048 ns |       6.874 ns |       203.07 ns |       195.11 ns |       219.64 ns |    6 | 0.0420 |     264 B |
-| Dictionary_GetValueRefOrAddDefault | 10          |       267.16 ns |       5.378 ns |      12.886 ns |       262.26 ns |       248.65 ns |       295.39 ns |    7 |      - |         - |
-| Dictionary_FirstOrDefault          | 2           |       297.03 ns |       5.906 ns |      12.839 ns |       297.33 ns |       276.13 ns |       325.51 ns |    8 | 0.0572 |     360 B |
-| Dictionary_ContainsThenGet         | 10          |       330.61 ns |       6.630 ns |      13.838 ns |       333.69 ns |       302.81 ns |       359.05 ns |    9 |      - |         - |
-| Dictionary_TryGet                  | 100         |     2,438.05 ns |      48.505 ns |      97.982 ns |     2,403.25 ns |     2,282.09 ns |     2,662.03 ns |   10 |      - |         - |
-| HashSet_FirstOrDefault             | 10          |     2,571.12 ns |      50.841 ns |      86.332 ns |     2,585.45 ns |     2,407.95 ns |     2,758.76 ns |   11 | 0.1411 |     904 B |
-| List_FirstOrDefault                | 10          |     2,661.42 ns |      53.225 ns |     129.556 ns |     2,641.75 ns |     2,474.10 ns |     2,978.82 ns |   12 | 0.1411 |     904 B |
-| Dictionary_GetValueRefOrAddDefault | 100         |     2,965.06 ns |      53.775 ns |      88.353 ns |     2,945.49 ns |     2,842.30 ns |     3,148.67 ns |   13 |      - |         - |
-| Dictionary_ContainsThenGet         | 100         |     3,695.06 ns |      49.818 ns |      41.600 ns |     3,701.89 ns |     3,613.70 ns |     3,768.52 ns |   14 |      - |         - |
-| Dictionary_FirstOrDefault          | 10          |     4,120.01 ns |      75.438 ns |     157.467 ns |     4,061.50 ns |     3,888.77 ns |     4,625.84 ns |   15 | 0.2136 |    1384 B |
-| Dictionary_TryGet                  | 500         |    13,606.36 ns |     268.230 ns |     503.800 ns |    13,609.74 ns |    12,805.79 ns |    14,440.04 ns |   16 |      - |         - |
-| Dictionary_GetValueRefOrAddDefault | 500         |    16,452.52 ns |     325.917 ns |     570.818 ns |    16,529.13 ns |    15,447.68 ns |    17,759.54 ns |   17 |      - |         - |
-| Dictionary_ContainsThenGet         | 500         |    21,033.12 ns |     375.690 ns |     351.420 ns |    21,122.58 ns |    20,181.49 ns |    21,413.56 ns |   18 |      - |         - |
-| HashSet_FirstOrDefault             | 100         |   190,971.83 ns |   3,815.672 ns |   8,612.608 ns |   191,581.81 ns |   174,966.38 ns |   211,830.83 ns |   19 | 1.2207 |    8104 B |
-| List_FirstOrDefault                | 100         |   198,725.14 ns |   3,705.092 ns |   3,638.895 ns |   199,570.64 ns |   192,381.91 ns |   205,008.94 ns |   20 | 1.2207 |    8104 B |
-| Dictionary_FirstOrDefault          | 100         |   326,888.59 ns |   6,416.722 ns |  12,052.159 ns |   321,802.00 ns |   308,638.77 ns |   357,116.06 ns |   21 | 1.9531 |   12904 B |
-| HashSet_FirstOrDefault             | 500         | 4,644,058.66 ns |  91,346.957 ns | 155,114.065 ns | 4,568,172.66 ns | 4,352,534.38 ns | 4,923,088.28 ns |   22 |      - |   40112 B |
-| List_FirstOrDefault                | 500         | 4,999,293.68 ns |  99,367.221 ns | 218,113.459 ns | 5,050,513.67 ns | 4,546,469.53 ns | 5,466,908.59 ns |   23 |      - |   40112 B |
-| Dictionary_FirstOrDefault          | 500         | 7,943,646.99 ns | 157,444.379 ns | 417,520.158 ns | 7,799,445.31 ns | 7,348,021.09 ns | 9,002,802.34 ns |   24 |      - |   64119 B |
+| Method                                              | QtyElements |             Mean |          Error |           StdDev |              Min |              Max |           Median | Rank |   Gen0 | Allocated |
+|-----------------------------------------------------|-------------|-----------------:|---------------:|-----------------:|-----------------:|-----------------:|-----------------:|-----:|-------:|----------:|
+| Dictionary__CollectionsMarshal_GetValueRefOrNullRef | 2           |         41.10 ns |       1.003 ns |         2.956 ns |         35.86 ns |         48.73 ns |         41.47 ns |    1 |      - |         - |
+| Dictionary__TryGet                                  | 2           |         43.58 ns |       0.895 ns |         2.343 ns |         38.68 ns |         48.51 ns |         43.43 ns |    2 |      - |         - |
+| Dictionary__ContainsThenGet                         | 2           |         81.98 ns |       3.560 ns |        10.496 ns |         64.96 ns |        108.65 ns |         79.27 ns |    3 |      - |         - |
+| HashSet__FirstOrDefault                             | 2           |        199.80 ns |       4.399 ns |        12.691 ns |        172.07 ns |        226.76 ns |        198.26 ns |    4 | 0.0420 |     264 B |
+| List__FirstOrDefault                                | 2           |        202.96 ns |       4.427 ns |        13.055 ns |        177.00 ns |        231.23 ns |        204.63 ns |    4 | 0.0420 |     264 B |
+| Dictionary__FirstOrDefault                          | 2           |        309.36 ns |       6.165 ns |        17.985 ns |        269.03 ns |        348.21 ns |        310.98 ns |    5 | 0.0572 |     360 B |
+| Dictionary__CollectionsMarshal_GetValueRefOrNullRef | 100         |      2,406.87 ns |      47.579 ns |       113.076 ns |      2,190.51 ns |      2,666.40 ns |      2,377.57 ns |    6 |      - |         - |
+| Dictionary__TryGet                                  | 100         |      2,494.71 ns |      49.788 ns |       132.030 ns |      2,215.68 ns |      2,733.05 ns |      2,509.53 ns |    7 |      - |         - |
+| Dictionary__ContainsThenGet                         | 100         |      3,963.01 ns |      89.919 ns |       259.436 ns |      3,519.08 ns |      4,652.10 ns |      3,932.00 ns |    8 |      - |         - |
+| Dictionary__CollectionsMarshal_GetValueRefOrNullRef | 1000        |     32,599.94 ns |     831.568 ns |     2,451.898 ns |     27,363.43 ns |     37,684.91 ns |     32,264.76 ns |    9 |      - |         - |
+| Dictionary__TryGet                                  | 1000        |     34,804.76 ns |   1,305.040 ns |     3,827.457 ns |     27,587.27 ns |     45,394.50 ns |     34,392.67 ns |   10 |      - |         - |
+| Dictionary__ContainsThenGet                         | 1000        |     46,214.23 ns |   1,046.737 ns |     3,069.898 ns |     38,766.02 ns |     52,997.17 ns |     46,285.89 ns |   11 |      - |         - |
+| List__FirstOrDefault                                | 100         |    219,969.16 ns |   4,377.738 ns |    12,839.146 ns |    190,649.17 ns |    249,507.15 ns |    220,343.48 ns |   12 | 1.2207 |    8104 B |
+| HashSet__FirstOrDefault                             | 100         |    220,436.44 ns |   6,945.222 ns |    20,149.348 ns |    183,246.75 ns |    265,970.09 ns |    219,111.69 ns |   12 | 0.9766 |    8104 B |
+| Dictionary__FirstOrDefault                          | 100         |    343,186.13 ns |   6,847.097 ns |    16,536.510 ns |    309,748.63 ns |    382,418.21 ns |    342,601.51 ns |   13 | 1.9531 |   12904 B |
+| HashSet__FirstOrDefault                             | 1000        | 21,114,784.97 ns | 578,472.890 ns | 1,696,560.849 ns | 18,026,646.88 ns | 24,862,593.75 ns | 21,431,121.88 ns |   14 |      - |   80134 B |
+| List__FirstOrDefault                                | 1000        | 21,368,201.58 ns | 537,567.801 ns | 1,576,593.304 ns | 17,665,471.88 ns | 24,550,143.75 ns | 21,426,546.88 ns |   14 |      - |   80134 B |
+| Dictionary__FirstOrDefault                          | 1000        | 37,349,783.80 ns | 838,812.617 ns | 2,433,547.499 ns | 30,810,128.57 ns | 42,532,164.29 ns | 37,278,807.14 ns |   15 |      - |  128198 B |
 
 
 ### Analysis
 What did we learn from that?
 
 1. Calling Dictionary.FirstOrDefault is a bad idea. It's 30 times slower than calling Dictionary.TryGetValue.
-2. Calling Dictionary.TryGetValue is 5 times slower than calling Dictionary.ContainsKey + Dictionary[key].
-3. If you have a dataset and need to find objects based on one property (like Id), use a Dictionary. It's the fastest way to do it. 
+2. Calling Dictionary.TryGetValue is somewhat faster than calling Dictionary.ContainsKey + Dictionary[key].
+3. CollectionsMarshal.GetValueRefOrNullRef is the fastest, but not by much. 
+4. If you have a dataset and need to find objects based on one property (like Id), use a Dictionary. It's the fastest way to do it. 
 
 

@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
@@ -10,7 +11,7 @@ namespace Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 [ExcludeFromCodeCoverage]
 [MemoryDiagnoser, RankColumn, MinColumn, MaxColumn, MeanColumn, MedianColumn, UnicodeConsoleLogger,
  Orderer(SummaryOrderPolicy.FastestToSlowest)]
-public class FindOneBenchmarks
+public class FindOneAndModifyBenchmarks
 {
     private List<Product> _list;
     private Dictionary<Guid, Product> _dictionary;
@@ -41,21 +42,15 @@ public class FindOneBenchmarks
     }
 
     [Benchmark]
-    public void List__FirstOrDefault()
+    public void List__FindIndex()
     {
         for (var i = 0; i < _ids.Count; i++)
         {
-            var x = _list.FirstOrDefault(x => x.Id == _ids[i]);
-        }
-    }
-
-    [Benchmark]
-    public void Dictionary__FirstOrDefault()
-    {
-        for (var i = 0; i < _ids.Count; i++)
-        {
-            //The value might be null.
-            var x = _dictionary.FirstOrDefault(x => x.Key == _ids[i]);
+            var itemIndex = _list.FindIndex(x => x.Id == _ids[i]);
+            
+            if (itemIndex == -1) continue;
+            
+            _list[itemIndex].Name = "Test Updated";
         }
     }
     
@@ -66,6 +61,8 @@ public class FindOneBenchmarks
         {
             //If using this, make sure the dictionary is not being modified while iterating.
             ref var x = ref CollectionsMarshal.GetValueRefOrNullRef(_dictionary, _ids[i]);
+            if (Unsafe.IsNullRef(ref x)) continue;
+            x.Name = "Test Updated";
         }
     }
     
@@ -74,7 +71,10 @@ public class FindOneBenchmarks
     {
         for (var i = 0; i < _ids.Count; i++)
         {
-            var x = _dictionary.TryGetValue(_ids[i], out var _);
+            var exist = _dictionary.TryGetValue(_ids[i], out var _);
+            if (!exist) continue;
+            
+            _dictionary[_ids[i]].Name = "Test Updated";
         }
     }
 
@@ -85,10 +85,9 @@ public class FindOneBenchmarks
         {
             if (!_dictionary.ContainsKey(_ids[i]))
                 continue;
-            var x = _dictionary[_ids[i]];
+            _dictionary[_ids[i]].Name = "Test Updated";
         }
     }
-
 
     [Benchmark]
     public void HashSet__FirstOrDefault()
@@ -96,6 +95,10 @@ public class FindOneBenchmarks
         for (var i = 0; i < _ids.Count; i++)
         {
             var x = _hashSet.FirstOrDefault(x => x.Id == _ids[i]);
+            if (x == null) continue;
+            _hashSet.Remove(x);
+            x.Name = "Test Updated";
+            _hashSet.Add(x);
         }
     }
 }

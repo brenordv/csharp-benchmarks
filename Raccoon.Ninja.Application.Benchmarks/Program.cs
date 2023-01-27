@@ -13,4 +13,7 @@ using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 //BenchmarkRunner.Run<FindOneBenchmarks>();
 
 //Uncomment to run "Numeric benchmarks" benchmark.
-BenchmarkRunner.Run<NumericBenchmarks>();
+//BenchmarkRunner.Run<NumericBenchmarks>();
+
+//Uncomment to run "Find one and modify" benchmark.
+BenchmarkRunner.Run<FindOneAndModifyBenchmarks>();

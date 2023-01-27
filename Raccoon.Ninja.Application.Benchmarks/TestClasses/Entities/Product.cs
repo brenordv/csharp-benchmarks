@@ -2,10 +2,10 @@
 
 public record Product
 {
-    public Guid Id { get; init; }
-    public string Name { get; init; }
-    public string Description { get; init; }
-    public float BaseValue { get; init; }
-    public float TaxPercent { get; init; }
-    public DateTime CreatedAt { get; init; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public float BaseValue { get; set; }
+    public float TaxPercent { get; set; }
+    public DateTime CreatedAt { get; set; }
 }
