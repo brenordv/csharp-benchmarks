@@ -6,6 +6,18 @@ I created this project to centralize my benchmark tests.
 2. [Find One Benchmark](./findonebenchmark.md)
 3. [Numeric Operation Benchmark](./numericbenchmark.md)
 
+# What does the result columns means
+1. Mean        : Arithmetic mean of all measurements
+2. Error       : Half of 99.9% confidence interval
+3. StdDev      : Standard deviation of all measurements
+4. Min         : Minimum
+5. Max         : Maximum
+6. Median      : Value separating the higher half of all measurements (50th percentile)
+7. Rank        : Relative position of current benchmark mean among all benchmarks (Arabic style)
+8. Gen0        : GC Generation 0 collects per 1000 operations
+9. Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+
+
 # Timing reference
 Just as a refresher:
 Here is a reference chart for common time units in the context of computer science and engineering:
