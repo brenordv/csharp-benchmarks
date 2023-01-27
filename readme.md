@@ -2,9 +2,10 @@
 I created this project to centralize my benchmark tests.
 
 # Benchmarks
-1. [AutoMapper benchmark](./automapperbenchmark.md)
-2. [Find One Benchmark](./findonebenchmark.md)
-3. [Numeric Operation Benchmark](./numericbenchmark.md)
+1. [AutoMapper](./automapperbenchmark.md)
+2. [Find One](./findonebenchmark.md)
+3. [Find One and Modify](./findoneandmodifybenchmark.md) 
+4. [Numeric Operation](./numericbenchmark.md)
 
 # What does the result columns means
 1. Mean        : Arithmetic mean of all measurements
