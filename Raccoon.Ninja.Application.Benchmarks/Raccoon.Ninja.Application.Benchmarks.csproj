@@ -17,6 +17,12 @@
       <Content Include="..\automapperbenchmark.md">
         <Link>automapperbenchmark.md</Link>
       </Content>
+      <Content Include="..\automappercompositebenchmark.md">
+        <Link>automappercompositebenchmark.md</Link>
+      </Content>
+      <Content Include="..\automappersimplebenchmark.md">
+        <Link>automappersimplebenchmark.md</Link>
+      </Content>
       <Content Include="..\findoneandmodifybenchmark.md">
         <Link>findoneandmodifybenchmark.md</Link>
       </Content>

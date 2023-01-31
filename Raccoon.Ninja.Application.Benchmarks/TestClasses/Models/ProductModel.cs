@@ -8,7 +8,7 @@ public record ProductModel
     public string Name { get; init; }
     public string Description { get; init; }
     public float FinalValue { get; init; }
-    
+
     public static implicit operator ProductModel(Product entity)
     {
         return new ProductModel

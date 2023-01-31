@@ -1,13 +1,16 @@
-﻿using BenchmarkDotNet.Running;
+﻿
+using BenchmarkDotNet.Running;
 using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 
 #if DEBUG
     throw new Exception("Benchmark must be run in Release mode");
 #endif
 
+//Uncomment to run AutoMapper Light benchmarks.
+BenchmarkRunner.Run<AutoMapperSimpleBenchmarks>();
 
-//Uncomment to run Auto Mapper benchmarks.
-//BenchmarkRunner.Run<AutoMapperBenchmarks>();
+//Uncomment to run AutoMapper Composite benchmarks.
+BenchmarkRunner.Run<AutoMapperCompositeBenchmarks>();
 
 //Uncomment to run "Find one" benchmark.
 //BenchmarkRunner.Run<FindOneBenchmarks>();
@@ -16,4 +19,4 @@ using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 //BenchmarkRunner.Run<NumericBenchmarks>();
 
 //Uncomment to run "Find one and modify" benchmark.
-BenchmarkRunner.Run<FindOneAndModifyBenchmarks>();
+//BenchmarkRunner.Run<FindOneAndModifyBenchmarks>();
