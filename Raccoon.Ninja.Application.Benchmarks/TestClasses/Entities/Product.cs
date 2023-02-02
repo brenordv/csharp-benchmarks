@@ -1,4 +1,6 @@
-﻿namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+﻿using Raccoon.Ninja.Application.Benchmarks.TestClasses.Models;
+
+namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
 
 public record Product
 {
@@ -8,4 +10,14 @@ public record Product
     public float BaseValue { get; set; }
     public float TaxPercent { get; set; }
     public DateTime CreatedAt { get; set; }
+    
+    public static implicit operator Product(ProductModel model)
+    {
+        return new Product
+        {
+            Id = model.Id,
+            Name = model.Name,
+            Description = model.Description
+        };
+    }
 }
