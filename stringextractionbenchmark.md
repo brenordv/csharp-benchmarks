@@ -6,6 +6,9 @@ Simple benchmark to check the performance of a few ways to extract some numbers 
 
 For all tests, the string used was: `42--bacon-7`
 
+In some regards, this whole benchmark is biased, because I'm using a fixed string and I already know the indexes of the numbers I want to extract.
+The point was to measure the performance of the "main operations".
+
 Scenarios:
 1. Substring: Using substrings to extract data
 2. ReadOnlySpan: Using ReadOnlySpan to extract data
@@ -24,7 +27,7 @@ Turns out that, according to Chat GPT, the most performant function is the most 
 | SplitString            | 104.92 ns | 2.093 ns | 2.570 ns |  99.30 ns | 109.20 ns | 105.15 ns |    4 | 0.0229 |     144 B |
 | RegexCapture           | 423.95 ns | 8.255 ns | 7.721 ns | 405.98 ns | 438.06 ns | 424.18 ns |    5 | 0.0978 |     616 B |
 
-Well, I'll be.... The method suggested by Chat GPT was amongst the fastest, not the best one memory-wise, but the second fastest. I'm impressed.
+Well, I'll be... The method suggested by Chat GPT was amongst the fastest, not the best one memory-wise, but the second fastest. I'm impressed.
 
 The best one across the board was ReadOnlySpan, which is the one I would have expected to be the fastest, because of the way a Span works.
 
