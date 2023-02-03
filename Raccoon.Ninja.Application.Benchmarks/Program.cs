@@ -2,7 +2,6 @@
 using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 using Raccoon.Ninja.Application.Benchmarks.Extras;
 
-
 //Uncomment to run some extra conversion tests. 
 //ExtraTests.TestConversion();
 
@@ -24,4 +23,7 @@ using Raccoon.Ninja.Application.Benchmarks.Extras;
 //BenchmarkRunner.Run<NumericBenchmarks>();
 
 //Uncomment to run "Find one and modify" benchmark.
-BenchmarkRunner.Run<FindOneAndModifyBenchmarks>();
+//BenchmarkRunner.Run<FindOneAndModifyBenchmarks>();
+
+//Uncomment to run "String Extraction" benchmark.
+BenchmarkRunner.Run<SubStringExtractionBenchmark>();

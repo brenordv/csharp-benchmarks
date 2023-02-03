@@ -12,29 +12,4 @@
       <PackageReference Include="BenchmarkDotNet" Version="0.13.4" />
       <PackageReference Include="Bogus" Version="34.0.2" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="..\automapperbenchmark.md">
-        <Link>automapperbenchmark.md</Link>
-      </Content>
-      <Content Include="..\automappercompositebenchmark.md">
-        <Link>automappercompositebenchmark.md</Link>
-      </Content>
-      <Content Include="..\automappersimplebenchmark.md">
-        <Link>automappersimplebenchmark.md</Link>
-      </Content>
-      <Content Include="..\findoneandmodifybenchmark.md">
-        <Link>findoneandmodifybenchmark.md</Link>
-      </Content>
-      <Content Include="..\findonebenchmark.md">
-        <Link>findonebenchmark.md</Link>
-      </Content>
-      <Content Include="..\numericbenchmark.md">
-        <Link>numericbenchmark.md</Link>
-      </Content>
-      <Content Include="..\readme.md">
-        <Link>readme.md</Link>
-      </Content>
-    </ItemGroup>
-
 </Project>

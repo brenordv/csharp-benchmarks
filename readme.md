@@ -6,6 +6,7 @@ I created this project to centralize my benchmark tests.
 2. [Find One](./findonebenchmark.md)
 3. [Find One and Modify](./findoneandmodifybenchmark.md) 
 4. [Numeric Operation](./numericbenchmark.md)
+5. [String Extraction](./stringextractionbenchmark.md)
 
 # What does the result columns means
 1. Mean        : Arithmetic mean of all measurements

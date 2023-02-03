@@ -2,6 +2,20 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Raccoon.Ninja.Application.Benchmarks", "Raccoon.Ninja.Application.Benchmarks\Raccoon.Ninja.Application.Benchmarks.csproj", "{37967CB9-7F06-48F0-B538-E4D0B1880DD1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99. Documentation", "99. Documentation", "{A1256AEE-A229-4695-AEF7-9D48BBC21831}"
+	ProjectSection(SolutionItems) = preProject
+		automapperbenchmark.md = automapperbenchmark.md
+		automappercompositebenchmark.md = automappercompositebenchmark.md
+		automappersimplebenchmark.md = automappersimplebenchmark.md
+		findoneandmodifybenchmark.md = findoneandmodifybenchmark.md
+		findonebenchmark.md = findonebenchmark.md
+		numericbenchmark.md = numericbenchmark.md
+		readme.md = readme.md
+		stringextractionbenchmark.md = stringextractionbenchmark.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00. Benchmarks", "00. Benchmarks", "{4613BBB2-E482-4368-81F4-7FEF04EB7A1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +26,8 @@ Global
 		{37967CB9-7F06-48F0-B538-E4D0B1880DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37967CB9-7F06-48F0-B538-E4D0B1880DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37967CB9-7F06-48F0-B538-E4D0B1880DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37967CB9-7F06-48F0-B538-E4D0B1880DD1} = {4613BBB2-E482-4368-81F4-7FEF04EB7A1F}
 	EndGlobalSection
 EndGlobal
