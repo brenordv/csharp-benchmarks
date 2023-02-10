@@ -1,5 +1,10 @@
 # Project
-I created this project to centralize my benchmark tests.
+I created this project to centralize my benchmark tests. This is in no way a super precise benchmark nor should it be
+considered as "empiric proof" or anything. Take it with a grain of salt.
+It's just someone curious about the performance of some common operations.
+
+All benchmarks were run in a Windows 10 machine using .net6.
+
 
 # Benchmarks
 1. [AutoMapper](./automapperbenchmark.md)
