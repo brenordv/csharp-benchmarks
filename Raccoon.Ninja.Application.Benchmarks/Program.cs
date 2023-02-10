@@ -26,4 +26,10 @@ using Raccoon.Ninja.Application.Benchmarks.Extras;
 //BenchmarkRunner.Run<FindOneAndModifyBenchmarks>();
 
 //Uncomment to run "String Extraction" benchmark.
-BenchmarkRunner.Run<SubStringExtractionBenchmark>();
+//BenchmarkRunner.Run<SubStringExtractionBenchmark>();
+
+//Uncomment to run "Null Comparison" benchmark.
+BenchmarkRunner.Run<NullComparisonBenchmarks>();
+
+//Uncomment to run "List Operations - Get Last" benchmark.
+BenchmarkRunner.Run<ListOpsGetLastBenchmarks>();
