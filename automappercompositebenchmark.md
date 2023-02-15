@@ -129,6 +129,8 @@ For this benchmark, every Purchase instance has 25 Products, 1 User and 1 Addres
 | AutoMapper_ListConvertedLINQ            | 10000            | 48,945,271.7 ns | 938,962.87 ns | 1,004,679.75 ns | 47,048,320.0 ns | 50,456,820.0 ns | 48,962,790.0 ns |   17 | 3700.0000 | 1400.0000 | 200.0000 | 21953.63 KB |
 | AutoMapper_ListOfEntitiesConverted      | 10000            | 52,527,265.8 ns | 916,643.56 ns | 1,091,198.95 ns | 49,913,436.4 ns | 53,915,954.5 ns | 52,836,890.9 ns |   18 | 3818.1818 | 1545.4545 | 272.7273 | 22131.69 KB |
 
+![Result Chart](./automappercompositebenchmark.png)
+
 
 One thing that I found interesting is that AutoMapper performed better converting individual entities in a for loop than batch converting.
 That difference scaled greatly with the workload for both average performance and memory usage.

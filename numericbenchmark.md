@@ -21,3 +21,6 @@ In scenarios 4 and 5, I had 2 integers, one for the whole number and another for
 | Sum_Int_to_Float  | 15.94 µs | 0.304 µs | 0.395 µs | 15.11 µs | 16.43 µs | 16.09 µs |    2 |         - |
 | Sum_Int_to_Double | 16.03 µs | 0.310 µs | 0.290 µs | 15.20 µs | 16.28 µs | 16.11 µs |    2 |         - |
 | Sum_Decimal       | 60.00 µs | 1.168 µs | 1.818 µs | 55.76 µs | 62.92 µs | 59.64 µs |    3 |         - |
+
+![Result Chart](./numericbenchmark.png)
+

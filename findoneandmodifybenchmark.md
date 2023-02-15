@@ -33,9 +33,10 @@ Scenarios:
 | List__FindIndex                                     | 1000        |  6,271,111.16 ns |  64,006.534 ns |  56,740.125 ns |  6,271,454.69 ns |  6,182,946.09 ns |  6,399,375.78 ns |   13 |      - |     112 B |
 | HashSet__FirstOrDefault                             | 1000        | 18,822,612.26 ns | 222,358.336 ns | 185,679.281 ns | 18,762,509.38 ns | 18,584,684.38 ns | 19,152,321.88 ns |   14 |      - |   80134 B |
 
-### Analysis
-What did we learn from that?
+![Result Chart](./findoneandmodifybenchmark.png)
 
+
+What did we learn from that?
 1. List.FindIndex performance degrades very fast.
 2. Dictionary performance is very good and also don't allocate memory.
 3. CollectionMarshal is the fastest, but not by a lot. If you really need every single nanosecond, you can use it. (As long as you remember that it uses unsafe code.)

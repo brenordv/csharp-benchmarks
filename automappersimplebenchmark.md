@@ -57,6 +57,9 @@ public record ProductModel
 | AutoMapper_ListConvertedLINQ            | 10000            | 1,051,677.007 ns | 20,739.9704 ns | 30,400.3797 ns | 1,039,105.859 ns | 1,007,458.984 ns | 1,102,852.148 ns |   21 | 101.5625 | 41.0156 |       - |  640170 B |
 | AutoMapper_ListOfEntitiesConverted      | 10000            | 1,106,267.364 ns | 21,729.0737 ns | 33,182.5904 ns | 1,100,171.484 ns | 1,029,599.609 ns | 1,192,829.297 ns |   22 | 136.7188 | 91.7969 | 33.2031 |  822480 B |
 
+![Result Chart](./automappersimplebenchmark.png)
+
+
 In that test, AutoMapper was awful across the board. It was the slowest in every scenario. It was also the most memory intensive. I’m not sure why it was so slow and memory intensive, but I’m guessing it has something to do
 with the fact that it’s using reflection to map the properties. 
 

@@ -46,3 +46,7 @@ Here is a reference chart for common time units in the context of computer scien
 - 1 Picosecond (ps) is equal to 1/1000000000000th of a second.
 
 It is important to notice that these units are used in different context. Milliseconds and seconds are common in context of human perception and everyday life. Microseconds, nanoseconds and picoseconds are commonly used in context of computer systems and physics.
+
+
+# Notes
+Charts created using: https://chartbenchmark.net/

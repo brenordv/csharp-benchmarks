@@ -64,10 +64,10 @@ Now let's see how they perform in practice.
 | List__FirstOrDefault                                | 1000        | 21,368,201.58 ns | 537,567.801 ns | 1,576,593.304 ns | 17,665,471.88 ns | 24,550,143.75 ns | 21,426,546.88 ns |   14 |      - |   80134 B |
 | Dictionary__FirstOrDefault                          | 1000        | 37,349,783.80 ns | 838,812.617 ns | 2,433,547.499 ns | 30,810,128.57 ns | 42,532,164.29 ns | 37,278,807.14 ns |   15 |      - |  128198 B |
 
+![Result Chart](./findonebenchmark.png)
 
-### Analysis
+
 What did we learn from that?
-
 1. Calling Dictionary.FirstOrDefault is a bad idea. It's 30 times slower than calling Dictionary.TryGetValue.
 2. Calling Dictionary.TryGetValue is somewhat faster than calling Dictionary.ContainsKey + Dictionary[key].
 3. CollectionsMarshal.GetValueRefOrNullRef is the fastest, but not by much. 

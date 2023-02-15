@@ -52,6 +52,9 @@ bool areEqual = object.Equals(a, b); // False
 | NativeObject_Is_Not_Type                   | 0.1030 ns | 0.0316 ns | 0.0925 ns | 0.0795 ns | 0.0000 ns | 0.3199 ns |    2 |         - |
 | NativeObject_Equals_Null                   | 0.3171 ns | 0.0356 ns | 0.0867 ns | 0.2926 ns | 0.2051 ns | 0.5237 ns |    3 |         - |
 
+![Result Chart](./nullcomparisonbenchmark.png)
+
+
 Interesting results here. For a ValueType object, checking if the object `is not type` is way faster than using the `HasValue` method.
 For an reference object, using object.ReferenceEquals is the fastest way to check if the object is null, but (IMO) I don't really like the readability.
 

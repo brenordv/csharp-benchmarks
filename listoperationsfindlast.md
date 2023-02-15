@@ -27,5 +27,8 @@ following methods to find the last element in the list:
 | LINQ_Last          | 1                | 14.6378 ns | 0.3148 ns | 0.5989 ns | 13.1661 ns | 15.7691 ns | 14.6208 ns |    7 |         - |
 | LINQ_Last          | 1000             | 14.8698 ns | 0.3280 ns | 0.8583 ns | 13.0903 ns | 16.8419 ns | 14.6868 ns |    7 |         - |
 
+![Result Chart](./listoperationsfindlast.png)
+
+
 So, sometimes, the old ways are better. Simply using count -1 was the fastest for all workloads. As always, linq adds some overhead, 
 but it's not that bad (and IMO is the most readable, which is a great plus).

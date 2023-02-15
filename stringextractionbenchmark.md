@@ -27,6 +27,9 @@ Turns out that, according to Chat GPT, the most performant function is the most 
 | SplitString            | 104.92 ns | 2.093 ns | 2.570 ns |  99.30 ns | 109.20 ns | 105.15 ns |    4 | 0.0229 |     144 B |
 | RegexCapture           | 423.95 ns | 8.255 ns | 7.721 ns | 405.98 ns | 438.06 ns | 424.18 ns |    5 | 0.0978 |     616 B |
 
+![Result Chart](./stringextractionbenchmark.png)
+
+
 Well, I'll be... The method suggested by Chat GPT was amongst the fastest, not the best one memory-wise, but the second fastest. I'm impressed.
 
 The best one across the board was ReadOnlySpan, which is the one I would have expected to be the fastest, because of the way a Span works.
