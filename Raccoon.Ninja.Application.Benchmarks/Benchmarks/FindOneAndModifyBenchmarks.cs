@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
 using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 using Raccoon.Ninja.Application.Benchmarks.TestClasses.Generators;
 
 namespace Raccoon.Ninja.Application.Benchmarks.Benchmarks;

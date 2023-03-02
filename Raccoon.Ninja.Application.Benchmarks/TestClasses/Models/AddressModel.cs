@@ -1,4 +1,5 @@
 ﻿using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 
 namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Models;
 

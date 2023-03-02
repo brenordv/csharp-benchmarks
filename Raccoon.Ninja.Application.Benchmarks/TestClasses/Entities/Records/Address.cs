@@ -1,4 +1,4 @@
-﻿namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+﻿namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 
 public record Address
 {
