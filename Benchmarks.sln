@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99. Documentation", "99. Do
 		stringextractionbenchmark.md = stringextractionbenchmark.md
 		nullcomparisonbenchmark.md = nullcomparisonbenchmark.md
 		listoperationsfindlast.md = listoperationsfindlast.md
+		recordvsclass.md = recordvsclass.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00. Benchmarks", "00. Benchmarks", "{4613BBB2-E482-4368-81F4-7FEF04EB7A1F}"

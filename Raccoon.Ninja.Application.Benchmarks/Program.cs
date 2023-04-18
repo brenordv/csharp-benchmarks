@@ -1,6 +1,6 @@
 ﻿using BenchmarkDotNet.Running;
 using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
-using Raccoon.Ninja.Application.Benchmarks.Extras;
+
 
 //Uncomment to run some extra conversion tests. 
 //ExtraTests.TestConversion();
@@ -29,7 +29,10 @@ using Raccoon.Ninja.Application.Benchmarks.Extras;
 //BenchmarkRunner.Run<SubStringExtractionBenchmark>();
 
 //Uncomment to run "Null Comparison" benchmark.
-BenchmarkRunner.Run<NullComparisonBenchmarks>();
+//BenchmarkRunner.Run<NullComparisonBenchmarks>();
 
 //Uncomment to run "List Operations - Get Last" benchmark.
-BenchmarkRunner.Run<ListOpsGetLastBenchmarks>();
+//BenchmarkRunner.Run<ListOpsGetLastBenchmarks>();
+
+//Uncomment to run "Record vs Class" benchmark.
+BenchmarkRunner.Run<RecordVsClassBenchmarks>();
