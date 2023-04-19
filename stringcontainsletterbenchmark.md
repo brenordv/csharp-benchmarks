@@ -21,20 +21,20 @@ To keep things fair, I didn't create any methods to avoid any extra overhead.
 
 
 # Results
-| Method                    |       Mean |     Error |    StdDev |        Min |        Max |    Median | Rank |   Gen0 | Allocated |
-|---------------------------|-----------:|----------:|----------:|-----------:|-----------:|----------:|-----:|-------:|----------:|
-| ForLoop__15chars          |  0.9939 ns | 0.0562 ns | 0.1210 ns |  0.6479 ns |   1.201 ns |  1.022 ns |    1 |      - |         - |
-| ForLoop__36chars          |  1.0775 ns | 0.0573 ns | 0.1568 ns |  0.7525 ns |   1.486 ns |  1.081 ns |    2 |      - |         - |
-| ForLoop__106chars         |  1.1202 ns | 0.0577 ns | 0.1561 ns |  0.7076 ns |   1.396 ns |  1.153 ns |    2 |      - |         - |
-| CheckEveryLetter_106chars | 11.0072 ns | 0.2553 ns | 0.7489 ns |  9.2790 ns |  12.478 ns | 11.017 ns |    3 |      - |         - |
-| CheckEveryLetter_36chars  | 13.4291 ns | 0.3031 ns | 0.8647 ns | 11.2394 ns |  15.284 ns | 13.346 ns |    4 |      - |         - |
-| CheckEveryLetter_15chars  | 22.9388 ns | 0.4909 ns | 1.3273 ns | 19.4873 ns |  25.409 ns | 22.923 ns |    5 |      - |         - |
-| Char_IsLetter__106chars   | 30.3280 ns | 0.7342 ns | 2.1647 ns | 25.9324 ns |  35.202 ns | 30.244 ns |    6 | 0.0153 |      96 B |
-| Char_IsLetter__36chars    | 30.4214 ns | 0.6429 ns | 1.7271 ns | 26.4854 ns |  34.132 ns | 30.541 ns |    6 | 0.0153 |      96 B |
-| Char_IsLetter__15chars    | 31.4383 ns | 0.7527 ns | 2.2195 ns | 26.2246 ns |  35.865 ns | 31.559 ns |    7 | 0.0153 |      96 B |
-| Regex__106chars           | 87.5616 ns | 1.7722 ns | 4.9401 ns | 74.5559 ns |  99.180 ns | 87.417 ns |    8 |      - |         - |
-| Regex__15chars            | 88.8317 ns | 1.8393 ns | 5.4233 ns | 76.8334 ns | 100.587 ns | 88.492 ns |    8 |      - |         - |
-| Regex__36chars            | 89.3708 ns | 2.2892 ns | 6.7138 ns | 74.5330 ns | 105.434 ns | 87.850 ns |    8 |      - |         - |
+| Method                    |      Mean |    Error |   StdDev |       Min |       Max |    Median | Rank |   Gen0 | Allocated |
+|---------------------------|----------:|---------:|---------:|----------:|----------:|----------:|-----:|-------:|----------:|
+| ForLoop__15chars          |  14.20 ns | 0.308 ns | 0.442 ns |  13.34 ns |  14.85 ns |  14.22 ns |    1 |      - |         - |
+| ForLoop__36chars          |  26.09 ns | 0.226 ns | 0.200 ns |  25.78 ns |  26.57 ns |  26.02 ns |    2 |      - |         - |
+| ForLoop__106chars         |  78.65 ns | 1.578 ns | 1.399 ns |  74.65 ns |  80.33 ns |  79.04 ns |    3 |      - |         - |
+| Regex__15chars            |  82.90 ns | 1.351 ns | 1.264 ns |  81.34 ns |  85.42 ns |  82.50 ns |    4 |      - |         - |
+| Char_IsLetter__15chars    |  97.66 ns | 1.274 ns | 1.129 ns |  95.89 ns |  99.88 ns |  97.55 ns |    5 | 0.0153 |      96 B |
+| Regex__36chars            | 126.86 ns | 1.407 ns | 1.316 ns | 124.66 ns | 128.74 ns | 126.50 ns |    6 |      - |         - |
+| CheckEveryLetter_15chars  | 148.55 ns | 1.225 ns | 1.146 ns | 146.90 ns | 150.46 ns | 148.41 ns |    7 |      - |         - |
+| CheckEveryLetter_36chars  | 180.93 ns | 3.409 ns | 6.486 ns | 170.67 ns | 198.11 ns | 179.58 ns |    8 |      - |         - |
+| Char_IsLetter__36chars    | 215.84 ns | 1.593 ns | 1.412 ns | 214.37 ns | 218.45 ns | 215.29 ns |    9 | 0.0153 |      96 B |
+| Regex__106chars           | 254.73 ns | 1.478 ns | 1.382 ns | 252.88 ns | 257.52 ns | 254.82 ns |   10 |      - |         - |
+| CheckEveryLetter_106chars | 308.13 ns | 4.883 ns | 6.684 ns | 301.71 ns | 326.79 ns | 306.21 ns |   11 |      - |         - |
+| Char_IsLetter__106chars   | 584.24 ns | 4.092 ns | 3.827 ns | 578.77 ns | 593.64 ns | 583.25 ns |   12 | 0.0153 |      96 B |
 
 ![Result Chart](./stringcontainsletterbenchmark.png)
 

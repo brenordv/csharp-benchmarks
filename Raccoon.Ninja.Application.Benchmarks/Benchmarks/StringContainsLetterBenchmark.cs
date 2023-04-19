@@ -10,11 +10,11 @@ namespace Raccoon.Ninja.Application.Benchmarks.Benchmarks;
  Orderer(SummaryOrderPolicy.FastestToSlowest)]
 public class StringContainsLetterBenchmark
 {
-    private const string Text15Chars = "TheQuickBrownF8";
-    private const string Text36Chars = "TheQuickBrownFoxJumpsOverTheLazyDog8";
+    private const string Text15Chars = "12#@!23$#@@%$2B";
+    private const string Text36Chars = "!@#!#$%!#@$123123!@#1231@#!@#123233B";
 
     private const string Text106Chars =
-        "TheQuickBrownFoxJumpsOverTheLazyDogTheQuickBrownFoxJumpsOverTheLazyDogTheQuickBrownFoxJumpsOverTheLazyDog8";
+        "!@#!@#!#$%#$%#$%@#!@#!@#!@#!@#!@#!@#!@#!$@#$%#$%^$%^%^&%*^&*$%^#$%@#$@#$@#$%$%^%^&%^$%%231231231251233333B";
 
     private static readonly Regex _regex = new("[a-zA-Z]");
 
