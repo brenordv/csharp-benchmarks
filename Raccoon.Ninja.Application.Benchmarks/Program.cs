@@ -29,7 +29,10 @@ using Raccoon.Ninja.Application.Benchmarks.Extras;
 //BenchmarkRunner.Run<SubStringExtractionBenchmark>();
 
 //Uncomment to run "Null Comparison" benchmark.
-BenchmarkRunner.Run<NullComparisonBenchmarks>();
+//BenchmarkRunner.Run<NullComparisonBenchmarks>();
 
 //Uncomment to run "List Operations - Get Last" benchmark.
-BenchmarkRunner.Run<ListOpsGetLastBenchmarks>();
+//BenchmarkRunner.Run<ListOpsGetLastBenchmarks>();
+
+//Uncomment to run "String Contains Letter" benchmark.
+BenchmarkRunner.Run<StringContainsLetterBenchmark>();
