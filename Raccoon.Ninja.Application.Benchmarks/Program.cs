@@ -35,4 +35,7 @@ using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 //BenchmarkRunner.Run<ListOpsGetLastBenchmarks>();
 
 //Uncomment to run "Record vs Class" benchmark.
-BenchmarkRunner.Run<RecordVsClassBenchmarks>();
+//BenchmarkRunner.Run<RecordVsClassBenchmarks>();
+
+//Uncomment to run "Null Comparison Revisited" benchmark.
+BenchmarkRunner.Run<NullComparisonRevisitedBenchmarks>();
