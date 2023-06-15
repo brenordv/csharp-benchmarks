@@ -1,3 +1,6 @@
+[Readme](./readme.md)
+
+
 # Numeric operations
 
 So, operations with decimal numbers are more precise with decimal, but slower. That we know. 

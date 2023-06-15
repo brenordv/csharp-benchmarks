@@ -1,6 +1,6 @@
-﻿namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+﻿namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Classes;
 
-public record User
+public struct PersonStruct
 {
     public Guid Id { get; set; }
     public string Name { get; set; }

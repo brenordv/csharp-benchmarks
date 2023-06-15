@@ -1,6 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Order;
 using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 
 namespace Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 

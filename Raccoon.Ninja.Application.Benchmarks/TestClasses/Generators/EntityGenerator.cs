@@ -1,10 +1,32 @@
 ﻿using Bogus;
 using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Classes;
+using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 
 namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Generators;
 
 public static class EntityGenerator
 {
+    public static SimpleProduct[] SimpleProducts(int quantity)
+    {
+        var faker = new Faker<SimpleProduct>()
+            .RuleFor(x => x.Name, f => f.Commerce.ProductName())
+            .RuleFor(x => x.Description, f => f.Commerce.ProductDescription())
+            .RuleFor(x => x.Price, f => f.Random.Decimal(0.5m, 4200m))
+            .RuleFor(x => x.Company, f => SimpleCompanies(1)[0]);
+
+        return faker.Generate(quantity).ToArray();
+    }
+    
+    public static SimpleCompany[] SimpleCompanies(int quantity)
+    {
+        var faker = new Faker<SimpleCompany>()
+            .RuleFor(x => x.Name, f => f.Commerce.ProductName())
+            .RuleFor(x => x.Address, f => f.Address.StreetAddress());
+
+        return faker.Generate(quantity).ToArray();
+    }
+    
     public static Product[] Products(int quantity)
     {
         var faker = new Faker<Product>()

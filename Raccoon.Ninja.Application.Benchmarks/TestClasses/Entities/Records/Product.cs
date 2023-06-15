@@ -1,6 +1,6 @@
 ﻿using Raccoon.Ninja.Application.Benchmarks.TestClasses.Models;
 
-namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 
 public record Product
 {
