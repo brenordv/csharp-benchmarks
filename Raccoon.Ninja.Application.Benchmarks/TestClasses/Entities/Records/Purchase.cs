@@ -1,6 +1,4 @@
-﻿using Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
-
-namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities;
+﻿namespace Raccoon.Ninja.Application.Benchmarks.TestClasses.Entities.Records;
 
 public record Purchase
 {
