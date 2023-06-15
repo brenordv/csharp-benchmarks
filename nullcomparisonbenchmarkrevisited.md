@@ -183,6 +183,7 @@ Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
 | Object_Equals_Null                                  | 500         |   684.977 ns | 13.5622 ns | 15.0743 ns |   688.692 ns |   645.040 ns |   712.653 ns |   10 |         - |
 | Control__IsNullOrWhitespace                         | 500         | 1,295.882 ns | 24.8264 ns | 22.0079 ns | 1,290.082 ns | 1,267.638 ns | 1,333.531 ns |   11 |         - |
 | Null_Coalesce__Child_Prop_Value_Is_NullOrWhitespace | 500         | 1,397.763 ns | 23.9224 ns | 22.3770 ns | 1,399.134 ns | 1,360.580 ns | 1,429.010 ns |   12 |         - |
+
 ![Result Chart](./nullcomparisonbenchmarkrevisitednet6.png)
 
 ## .net8
@@ -216,6 +217,7 @@ Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
 | Object_Equals_Null                                  | 500         |   800.556 ns | 15.8187 ns | 25.0901 ns |   812.057 ns |   754.604 ns |   834.029 ns |   12 |         - |
 | Control__IsNullOrWhitespace                         | 500         |   985.448 ns | 19.5823 ns | 46.1578 ns |   994.587 ns |   892.911 ns | 1,042.268 ns |   13 |         - |
 | Null_Coalesce__Child_Prop_Value_Is_NullOrWhitespace | 500         | 1,218.599 ns | 24.3599 ns | 54.4843 ns | 1,223.966 ns | 1,135.354 ns | 1,298.494 ns |   14 |         - |
+
 ![Result Chart](./nullcomparisonbenchmarkrevisitednet8.png)
 
 ## Comparison
