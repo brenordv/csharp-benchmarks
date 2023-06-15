@@ -12,6 +12,7 @@ All benchmarks were run in a Windows 10 machine using .net6.
 3. [Find One and Modify](./findoneandmodifybenchmark.md) 
 4. [Numeric Operation](./numericbenchmark.md)
 5. [String Extraction](./stringextractionbenchmark.md)
+6. [String contains letter](./stringcontainsletterbenchmark.md)
 6. [Null Check](./nullcomparisonbenchmark.md)
 7. [Null Check - Revisited](./nullcomparisonbenchmarkrevisited.md)
 8. [List Operations - Find Last](./listoperationsfindlast.md)

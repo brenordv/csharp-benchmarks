@@ -37,5 +37,8 @@ using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 //Uncomment to run "Record vs Class" benchmark.
 //BenchmarkRunner.Run<RecordVsClassBenchmarks>();
 
+//Uncomment to run "String Contains Letter" benchmark.
+//BenchmarkRunner.Run<StringContainsLetterBenchmark>();
+
 //Uncomment to run "Null Comparison Revisited" benchmark.
 BenchmarkRunner.Run<NullComparisonRevisitedBenchmarks>();
