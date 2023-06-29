@@ -17,6 +17,7 @@ All benchmarks were run in a Windows 10 machine using .net6.
 7. [Null Check - Revisited](./nullcomparisonbenchmarkrevisited.md)
 8. [List Operations - Find Last](./listoperationsfindlast.md)
 9. [Prime Number](./primenumbersbenchmark.md)
+10. [List Has Items](./listhasitemsbenchmark.md)
 
 
 # What does the result columns means

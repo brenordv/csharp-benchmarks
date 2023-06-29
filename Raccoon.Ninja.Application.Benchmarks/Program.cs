@@ -44,4 +44,7 @@ using Raccoon.Ninja.Application.Benchmarks.Benchmarks;
 //BenchmarkRunner.Run<NullComparisonRevisitedBenchmarks>();
 
 //Uncomment to run "Prime Numbers" benchmark.
-BenchmarkRunner.Run<PrimeNumberBenchmark>();
+//BenchmarkRunner.Run<PrimeNumberBenchmark>();
+
+//Uncomment to run "List Has Items" benchmark.
+BenchmarkRunner.Run<ListHasItemsBenchmark>();
