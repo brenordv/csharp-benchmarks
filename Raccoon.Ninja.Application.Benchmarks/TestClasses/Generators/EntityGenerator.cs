@@ -77,4 +77,16 @@ public static class EntityGenerator
 
         return faker.Generate(quantity).ToArray();
     }
+
+    public static WishlistItem[] WishlistItems(int quantity)
+    {
+        var faker = new Faker<WishlistItem>()
+            .RuleFor(x => x.IsEnabled, f => f.Random.Bool())
+            .RuleFor(x => x.ProductId, f => f.Random.Guid())
+            .RuleFor(x => x.StartDate, f => f.Date.Past())
+            .RuleFor(x => x.EndDate, f => f.Date.Future())
+            .RuleFor(x => x.UserType, f => (WishlistItemUserType)f.Random.Int(1, 3));
+
+        return faker.Generate(quantity).ToArray();
+    }
 }
