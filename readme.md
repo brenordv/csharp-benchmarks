@@ -1,3 +1,5 @@
+> In the future I might unarchive this, but with a different format.
+
 # Project
 I created this project to centralize my benchmark tests. This is in no way a super precise benchmark nor should it be
 considered as "empiric proof" or anything. Take it with a grain of salt.
